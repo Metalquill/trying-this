@@ -1,0 +1,227 @@
+/* eslint-disable max-len */
+export const qualificationUrls = {
+  BA: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-arts',
+  'BA(HONS)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-arts-with-honours',
+  BCJ: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-criminal-justice',
+  BCOM: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-commerce',
+  'BCOM(HONS)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-commerce-with-honours',
+  'BE(HONS)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-engineering-with-honours',
+  'BE(HONS) INT':
+    'https://www.canterbury.ac.nz/study/academic-study/engineering/study-engineering-forestry-and-product-design/engineering-first-year',
+  BFA: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-fine-arts',
+  'BFA INT': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-fine-arts',
+  'BFA(HONS)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-fine-arts',
+  BFORSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-forestry-science',
+  BHSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-health-sciences',
+  LLB: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-laws',
+  'LLB (HONS)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-laws',
+  MUSB: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-music',
+  'MUSB(HONS)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-music-with-honours',
+  BPRODDESIGN: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-product-design',
+  'BPRODDESIGN/BCOM':
+    'https://www.canterbury.ac.nz/study/getting-started/about-our-qualifications/bachelors-degrees/double-and-conjoint-degrees',
+  'BPRODDESIGN/BSC':
+    'https://www.canterbury.ac.nz/study/getting-started/about-our-qualifications/bachelors-degrees/double-and-conjoint-degrees',
+  BSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-science',
+  'BSC(HONS)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-science-with-honours',
+  BSLP: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-speech-and-language-pathology-with-honours',
+  'BSLP INT':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-speech-and-language-pathology-with-honours',
+  'BSLP(HONS)':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-speech-and-language-pathology-with-honours',
+  BSPC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-sport-coaching',
+  BSW: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-social-work-with-honours',
+  'BTCHLN (EARLY CHILDHOOD)':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/ako-bachelor-of-teaching-and-learning',
+  'BTCHLN (PRIMARY)':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/ako-bachelor-of-teaching-and-learning',
+  CERTARTS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-in-arts',
+  CERTCJ: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-in-criminal-justice',
+  CERTCOM: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-in-commerce',
+  CERTFOUNSTUDIES: '',
+  CERTLANG: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-in-languages',
+  CERTLS: '',
+  CERTSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-in-science',
+  CERTSPC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-in-sport-coaching',
+  'CHIRO INT': '',
+  'COP ARTS': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP ARTS (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP COMMERCE': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP COMMERCE (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP CRIMINAL JUSTICE': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP EDUCATION': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP EDUCATION (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP ENGINEERING': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP ENGINEERING (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP FINE ARTS': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP FINE ARTS (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP FORESTRY': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP FORESTRY (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP LAW': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP LAW (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP MUSIC': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP MUSIC (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP PREP': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP SCIENCE': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  'COP SCIENCE (PG)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-of-proficiency',
+  CUP: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/certificate-in-university-preparation',
+  DIPECE: '',
+  DIPGLOBALHUMANENG:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/diploma-in-global-humanitarian-engineering',
+  DIPLANG: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/diploma-in-languages',
+  GRADCERTSPC:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/graduate-certificate-in-sport-coaching',
+  'GRADDIPACC&IS': '',
+  GRADDIPARTS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/graduate-diploma-in-arts',
+  GRADDIPCJ: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/graduate-diploma-in-criminal-justice',
+  GRADDIPCOM: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/graduate-diploma-in-commerce',
+  GRADDIPECON: '',
+  GRADDIPECTCH: '',
+  GRADDIPFOR:
+    'https://www.canterbury.ac.nz/study/getting-started/about-our-qualifications/graduate-certificates-and-diplomas',
+  GRADDIPMGT: '',
+  GRADDIPSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/graduate-diploma-in-science',
+  'GRADDIPTCHLN(EC)':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/graduate-diploma-in-teaching-and-learning-early-childhood',
+  'GRADDIPTCHLN (PRIMARY)':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/graduate-diploma-in-teaching-and-learning',
+  'GRADDIPTCHLN (SECONDARY)':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/graduate-diploma-in-teaching-and-learning',
+  LLM: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-laws',
+  'LLM(INTLAWS&POLS)':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-laws-international-law-and-politics',
+  MA: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-arts',
+  MADS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-applied-data-science',
+  MAFE: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-applied-finance-and-economics',
+  MARCHENG: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-architectural-engineering',
+  MAST: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-antarctic-studies',
+  MAUD: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-audiology',
+  MBA: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-business-administration',
+  MBIS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-business-information-systems',
+  MCALL: 'https://www.canterbury.ac.nz/about-uc/corporate-information/regulations/qualification-regulations/mcall-reg',
+  MCOM: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-commerce',
+  MCOUNS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-counselling',
+  MDRR: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-disaster-risk-and-resilience',
+  ME: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-engineering',
+  MED: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-education',
+  MEFE: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-engineering-in-fire-engineering',
+  MEM: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-engineering-management',
+  MENGST: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-engineering-studies',
+  MET: 'https://www.canterbury.ac.nz/about-uc/corporate-information/regulations/qualification-regulations/met-reg',
+  MEURO: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-european-union-studies',
+  MFA: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-fine-arts',
+  MFENG: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-financial-engineering',
+  MFORSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-forestry-science',
+  MHEALSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-health-sciences',
+  MHEALSCPP:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-health-sciences-professional-practice',
+  MHIT: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-human-interface-technology',
+  MIRAD:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-international-relations-and-diplomacy',
+  MLING: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-linguistics',
+  MMIL: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-maori-and-indigenous-leadership',
+  MMUS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-music',
+  MPA: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-professional-accounting',
+  MPAG: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-policy-and-governance',
+  MSAPH:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-spatial-analysis-for-public-health',
+  MSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-science',
+  MSLP: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-speech-and-language-pathology',
+  MSPECTCHG: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-specialist-teaching',
+  MSS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-sport-science',
+  MSTRATCOM: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-strategic-communication',
+  MSW: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-social-work',
+  'MSW (APP)': 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-social-work-applied',
+  MTCHGLN: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-teaching-and-learning',
+  MTESOL:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-teaching-english-to-speakers-of-other-languages',
+  MTREO: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-te-reo-maori',
+  MURR: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-urban-resilience-and-renewal',
+  MWATERRM: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-water-resource-management',
+  MWRIT: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-writing',
+  'OPTO INT': '',
+  PGCERTANTASTUD:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-antarctic-studies',
+  PGCERTARCHENG:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-architectural-engineering',
+  PGCERTARTS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-arts',
+  PGCERTBUS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-business',
+  PGCERTDIGI:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-digital-humanities',
+  PGCERTED: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-education',
+  PGCERTENG: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-engineering',
+  PGCERTGST:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-geospatial-data-science',
+  PGCERTHEALSC:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-health-sciences',
+  PGCERTIST:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-information-systems-and-technology',
+  PGCERTMIL:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-maori-and-indigenous-leadership',
+  PGCERTPC:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-palliative-care',
+  PGCERTSPECTCHG:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-specialist-teaching',
+  PGCERTSS:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-sport-science',
+  PGCERTTERTTCHG:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-tertiary-teaching',
+  PGCERTTESOL:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-certificate-in-teaching-english-to-speakers-of-other-languages',
+  PGDIPADS:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-applied-data-science',
+  PGDIPARTCURATORSHIP:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-art-curatorship',
+  PGDIPARTS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-arts',
+  PGDIPBA:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-business-administration',
+  PGDIPBIS:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-business-information-systems',
+  PGDIPBUS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-business',
+  PGDIPCHFAMPSYC:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-child-and-family-psychology',
+  PGDIPCLINPSYC:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-clinical-psychology',
+  PGDIPED: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-education',
+  PGDIPFINEARTS: '',
+  PGDIPFOR: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-forestry',
+  PGDIPGST:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-geospatial-data-science',
+  PGDIPHEALSC:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-health-sciences',
+  PGDIPIST:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-information-systems-and-technology',
+  PGDIPSC: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-science',
+  PGDIPSPECTCHG:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-specialist-teaching',
+  PGDIPSS: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-sport-science',
+  PGDIPTEREO: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-te-reo-maori',
+  PGDIPWATERRM:
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/postgraduate-diploma-in-water-resource-management',
+  PMEG: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/professional-master-of-engineering-geology',
+  PMGST: 'https://www.canterbury.ac.nz/study/academic-study/qualifications/master-of-geospatial-data-science',
+  'PRE-BSC(HONS)': '',
+  'VETSC INT': '',
+  DEFAULT_QUAL_INFO: 'https://www.canterbury.ac.nz/study/study-support-info/study-related-topics',
+  MCED: 'https://www.canterbury.ac.nz/study/other-study-options/microcredentials-and-short-courses/better-start-literacy-approach',
+  MCEN: 'https://www.canterbury.ac.nz/study/other-study-options/microcredentials-and-short-courses',
+};
+
+export const cacQualUrls = {
+  'BSW(HONS)':
+    'https://www.canterbury.ac.nz/arts/schools-and-departments/social-work/how-to-apply-for-social-work-limited-entry-programmes/',
+  'BSLP(HONS)':
+    'https://www.canterbury.ac.nz/study/academic-study/qualifications/bachelor-of-speech-and-language-pathology-with-honours',
+  MAUD: 'https://www.canterbury.ac.nz/content/dam/uoc-main-site/documents/pdfs/forms/MAud-Application_Form-2022.pdf',
+  MCOUNS:
+    'https://www.canterbury.ac.nz/study/academic-study/health/study-health/health-qualifications/counselling/master-of-counselling-information',
+  'MSW (APP)':
+    'https://www.canterbury.ac.nz/arts/schools-and-departments/social-work/how-to-apply-for-social-work-limited-entry-programmes/',
+  MSLP: 'https://www.canterbury.ac.nz/study/academic-study/science/science-schools-and-departments/school-of-psychology-speech-and-hearing/postgraduate-psychology-speech-and-hearing',
+  PGDIPCLINPSYC:
+    'https://www.canterbury.ac.nz/study/academic-study/science/science-schools-and-departments/school-of-psychology-speech-and-hearing/postgraduate-psychology-speech-and-hearing/pgdip-in-clinical-psychology',
+  PGDIPCBT:
+    'https://www.canterbury.ac.nz/study/academic-study/science/science-schools-and-departments/school-of-psychology-speech-and-hearing/postgraduate-psychology-speech-and-hearing/pgdip-in-cognitive-behaviour-therapy',
+  PGDIPCHFAMPSYC:
+    'https://www.canterbury.ac.nz/study/academic-study/health/study-health/health-qualifications/child-and-family-psychology/postgraduate-diploma-in-child-and-family-psychology-information',
+};
