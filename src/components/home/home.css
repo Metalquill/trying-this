@@ -1,7 +1,25 @@
-.card {
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.mynav-container {
+    width: 20%;
+    margin-left: 50px;
+}
+
+.mynav-container > div.card {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.home-container > div.card {
     border: 2px solid black;
-    width: 50%;
-    margin-left: 450px;
+    border-radius: 8px;
+    width: 23rem;
+    
     z-index: 0;
 }
 
@@ -14,6 +32,8 @@
 }
 
 .day-n-night {
+    margin-right: 20px;
+    display:flex;
     z-index: 1;
-    margin-top: -190px;
 }
+
