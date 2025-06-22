@@ -1,0 +1,60 @@
+.origin-container {
+    display: flex;
+    justify-content: space-around;
+    .card {
+        width: 30rem;
+        display: flex;
+        padding: 1rem;
+        margin: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+
+.timesheetValues, .otherSide {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.timesheetValues {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.otherSide {
+    margin-top: -10.5rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* Responsive layout for mobile screens */
+@media (max-width: 768px) {
+    .timesheetValues {
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0.5rem;
+    }
+
+    .otherSide {
+        margin-top: -6.5rem;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .origin-container {
+        .card {
+            width: 26rem;
+            height: 18rem;
+            margin: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 20px; 
+        }
+    }
+}
+
