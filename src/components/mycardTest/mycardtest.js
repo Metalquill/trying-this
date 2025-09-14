@@ -30,11 +30,6 @@ export default function MyCardTest() {
             </div> */}
             <div className="content">
               <ul>
-                <li><a href='https://ucdigitalsms.atlassian.net/wiki/spaces/SFP/pages/3265560588/UC+Git+Tooling' target="_blank" rel="noreferrer">Git Tooling</a></li>
-                <li><a href="https://ucdigitalsms.atlassian.net/wiki/spaces/SFP/pages/2279702618/Git+Gud+-+A+little+help+on+using+Git+in+Student+First" target="_blank" rel="noreferrer">Git Gud</a></li>
-                <li><a href='https://ucdigitalsms.atlassian.net/wiki/spaces/SFP/pages/2045214731/Developer+Portal' target="_blank" rel="noreferrer">Developer portal</a></li>
-                <li><a href='https://ucdigitalsms.atlassian.net/wiki/spaces/SFP/pages/2388492302/System+outage+and+banners' target="_blank" rel="noreferrer">Banners</a></li>
-                <li><a href='https://ucdigitalsms.atlassian.net/wiki/spaces/SFP/pages/2422276097/The+ultimate+guide+and+glossary+of+acronyms' target="_blank" rel="noreferrer">Glossary</a></li>
               </ul>
             </div>
           </div>
@@ -43,3 +38,4 @@ export default function MyCardTest() {
 }
 
 // sudo password: cat
+
