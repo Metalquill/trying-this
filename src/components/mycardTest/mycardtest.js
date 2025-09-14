@@ -37,5 +37,6 @@ export default function MyCardTest() {
     )
 }
 
-// sudo password: cat
+
+
 
