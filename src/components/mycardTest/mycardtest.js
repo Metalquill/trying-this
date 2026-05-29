@@ -88,6 +88,3 @@ export default function MyCardTest() {
     )
 }
 
-// sudo password: cat
-// Sunflower1977!!
-// ticket CookiesAndCream42
