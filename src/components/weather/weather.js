@@ -258,6 +258,19 @@ const temperatureForTomorrow = () => {
     
   }
 
+
+
+  const iconByHour = (theData, theDate) => {
+    const getIcons = theData.slice(0, theDate)
+    const iconDays = []
+    getIcons.forEach((datum) => {
+        const timeValue = new Date(datum.time)
+        
+        iconDays.push(datum.data.next_1_hours.summary.symbol_code + " " + timeValue.getHours() + ":00")
+    })
+    return iconDays;
+  }
+
   // Other way to do this instead of temptoday to get days of the week etc
   const days = ["Sunday","Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let whatsToday = days[currentDate.getDay()]
@@ -272,6 +285,8 @@ const temperatureForTomorrow = () => {
  console.log(`${tomorrowDay} weather: max: ${temperatureByDay(fortyEightHours, temperatureForTomorrow(), false)} , min: ${temperatureByDay(fortyEightHours, temperatureForTomorrow(), true)}`)
        
  console.log(`${dayAfterTomorrowDay} weather: max: ${temperatureByDay(seventyTwoHours, temperatureForAnyDay(), false)} , min: ${temperatureByDay(seventyTwoHours, temperatureForAnyDay(), true)}`) 
+
+ console.log('icons by hour: ', iconByHour(fortyEightHours, temperatureForTomorrow()))
 
   const sunriseApiFallback = () => {
     if (sunUp.length > 1) {
@@ -337,7 +352,7 @@ const temperatureForTomorrow = () => {
             </div>
                 <div className='card-content'>
                     <span className='card-activator grey-text text-darken-4'>
-                        <h4 className='city'>{isTeReo ? 'Ōtautahi' : 'Christchurch'} &nbsp; <button className='teReo' onClick={handleClick}>{isTeReo ? 'In English' : 'Try Te Reo'}</button></h4> 
+                        <h4 className='city'>{isTeReo ? 'Ōtautahi' : 'Christchurch'} &nbsp; <button className='teReo' onClick={handleClick}>{isTeReo ? 'In English' : 'Try Te Reo Māori'}</button></h4> 
                         <ul>
                         <li className='update'>
                             <small>
@@ -375,7 +390,7 @@ const temperatureForTomorrow = () => {
                         <div className='wind-speed'>
                             {forecast.map(item => (
                                 <li key={item.time}>
-                                    Wind speed: {Math.round(item.data.instant.details.wind_speed * 3.6)} km/h {windDirection()}
+                                    {isTeReo ? 'Kōkōhoro: ' : 'Wind speed: '} {Math.round(item.data.instant.details.wind_speed * 3.6)} km/h {windDirection()}
                                 </li>
                             ))}
                         </div>
@@ -395,7 +410,7 @@ const temperatureForTomorrow = () => {
                             </li>
                         </div>
                         <div className='day-length'>
-                         <p>Day length: {dayLengthFallback()}</p>
+                         <p>{isTeReo ? 'Rā whāroa: ' :'Day length: '} {dayLengthFallback()}</p>
                         </div>
                     </ul>
                 </div>

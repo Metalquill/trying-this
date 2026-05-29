@@ -81,6 +81,7 @@ import snowshowers_polartwilight from './weatherIcons/svg/snowshowers_polartwili
 import snowshowersandthunder_day from './weatherIcons/svg/snowshowersandthunder_day.svg' 
 import snowshowersandthunder_night from './weatherIcons/svg/snowshowersandthunder_night.svg' 
 import snowshowersandthunder_polartwilight from './weatherIcons/svg/snowshowersandthunder_polartwilight.svg'
+import no_icon from './weatherIcons/svg/no_data_svgrepo_com.svg'
 
 const MySVGIcons = {
     clearsky_day,
@@ -166,6 +167,7 @@ const MySVGIcons = {
     snowshowersandthunder_day,
     snowshowersandthunder_night,
     snowshowersandthunder_polartwilight,
+    no_icon,
 
 }
 
