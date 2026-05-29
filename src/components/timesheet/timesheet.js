@@ -2,13 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './timesheet.css'
 import { data, urlInput } from '../weather/urls'
 import * as weatherFunctions from './helperfunctions'
-
-// 30 minute intervals of activity
-// Opex = student management operational code
-// Capex = student management product code
-// Opex is user support, work on prod bugs, regression testing, release activities, tech debt, all meetings on student management topics
-// Capex = new feature work, development, testing, planned improvements, meetings about new features
-//3.25 minutes = 0.06 ,7.5 minutes = 0.125 ,15 mins = 0.25, 30 mins = 0.5, 45 mins = 0.75 (this one isn't needed though)
+import ForecastByDay from './forecastByday'
 
 // 10.7.2025
 export default function Timesheet() {
@@ -81,9 +75,6 @@ const handleCitySubmit = () => {
      setDateHere(false)
 }
 
-const myTestArray = ["clear_day 5:00", "cloudy 7:00", "fog 12:00", "partlycloudy 15:00", "rain 18:00", "snow 21:00", "thunderstorm 23:00"]
-const myotherTestArray = myTestArray.filter(value => value.includes('7:00'))
-console.log("my other test array: ", myotherTestArray)
 
 
 const handleCityChange = (event) => {
@@ -128,26 +119,26 @@ return (
                     if (cityValue === city.name) {
                         return (
                             <div key={city.name} style={{marginTop: '10px'}}>
-                                {/* <a 
+                                <a 
                                     href={urlInput(city.lat, city.long, city.altitude, city.timezone, city.date).weatherApiUrl} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     style={{display: 'block', marginBottom: '10px'}}
                                 >
                                     View Weather API for {city.name}
-                                </a> */}
+                                </a>
                                 {!isLoaded && !otherError && <p>Loading weather data...</p>}
                                 {otherError && <p style={{color: 'red'}}>{otherError}</p>}
                                 {isLoaded && forecast && forecast.length > 0 && (
                                     
                                     <div>
-                                        <p><strong>{city.name}</strong><img className='icon-test' src={weatherFunctions.weatherIconOutput(forecast)} alt='Icon error'></img></p>
+                                        <p><strong>{city.name}</strong><img className='icon-test' src={weatherFunctions.weatherIconOutput(forecast)} alt='Icon error'></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{weatherFunctions.weatherDesciption(forecast)}</p>
                                         {forecast.map(item => (
                                             <div key={item.time} style={{marginTop: '10px'}}>
                                                 <p><strong>Temperature:</strong> {item.data.instant.details.air_temperature}°C</p>
                                                 <strong>Forecast:</strong> {weatherFunctions.weatherDesciption(forecast)}
 
-                                            {console.log('icons by hour: ', weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)))}
+                                            {console.log('icons by hour: ', weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours), city.timezone))}
                                                 <ul>
                                                     <li className='minAndMaxed'>
                                                         Max:  <font className='hot'>{
@@ -175,27 +166,7 @@ return (
                                             <font className='cool'>{
                                                 weatherFunctions.temperatureByDay(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours), true, fortyEightHours, seventyTwoHours)
                                             }</font>
-                                            <p>{`  7am     12pm   7pm   11pm`}</p>
-                                            <p><strong className='nextDayForecast'>{`${weatherFunctions.whatsTomorrow}'s forecast: `}</strong><img 
-                                                className='icon-test' 
-                                                src={
-                                                    weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)), '7:00'))
-                                                } alt="Weather Icon" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                                                <img 
-                                                    className='icon-test' 
-                                                    src={
-                                                        weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)), '12:00'))
-                                                    } alt="Weather Icon" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                                                <img 
-                                                    className='icon-test' 
-                                                    src={
-                                                        weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)), '19:00'))
-                                                    } alt="Weather Icon" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                                                <img 
-                                                    className='icon-test' 
-                                                    src={
-                                                        weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)), '23:00'))
-                                                    } alt="Weather Icon" /></p>
+                                            {ForecastByDay(fortyEightHours, weatherFunctions.whatsTomorrow, weatherFunctions, weatherFunctions.temperatureForTomorrow, city.timezone)}
                                         </div>
                                         <div>
                                             {`${weatherFunctions.whatsDayAfterTomorrow}'s weather: max: `}
@@ -205,33 +176,10 @@ return (
                                             <font className='cool'>{
                                                 weatherFunctions.temperatureByDay(seventyTwoHours, weatherFunctions.temperatureForAnyDay(seventyTwoHours), true, fortyEightHours, seventyTwoHours)
                                             }</font>
-                                            <p>{`  7am     12pm   7pm   11pm`}</p>
-                                            <p><strong className='nextDayForecast'>{`${weatherFunctions.whatsDayAfterTomorrow}'s forecast: `}</strong><img 
-                                                className='icon-test' 
-                                                src={
-                                                    weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(seventyTwoHours, weatherFunctions.temperatureForAnyDay(seventyTwoHours)), '7:00'))
-                                                } alt="Weather Icon" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                                                <img 
-                                                    className='icon-test' 
-                                                    src={
-                                                        weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(seventyTwoHours, weatherFunctions.temperatureForAnyDay(seventyTwoHours)), '12:00'))
-                                                    } alt="Weather Icon" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                                                <img 
-                                                    className='icon-test' 
-                                                    src={
-                                                        weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(seventyTwoHours, weatherFunctions.temperatureForAnyDay(seventyTwoHours)), '19:00'))
-                                                    } alt="Weather Icon" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                                                <img 
-                                                    className='icon-test' 
-                                                    src={
-                                                        weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(seventyTwoHours, weatherFunctions.temperatureForAnyDay(seventyTwoHours)), '23:00'))
-                                                    } alt="Weather Icon" /></p>
+                                            {ForecastByDay(seventyTwoHours, weatherFunctions.whatsDayAfterTomorrow, weatherFunctions, weatherFunctions.temperatureForAnyDay, city.timezone)}
                                         </div>
                                         <div>
-                                           {/* <p>{'7am:'} <img className='icon-test' src={weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)), '7:00'))} alt="Weather Icon" /></p>
-                                            <p>{'Midday:'}<img className='icon-test' src={weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)), '12:00'))} alt="Weather Icon" /></p>
-                                            <p>{'7pm:'}<img className='icon-test' src={weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)), '19:00'))} alt="Weather Icon" /></p>
-                                            <p>{'11pm:'}<img className='icon-test' src={weatherFunctions.weatherIcontest(weatherFunctions.iconForTheDay(weatherFunctions.iconByHour(fortyEightHours, weatherFunctions.temperatureForTomorrow(fortyEightHours)), '23:00'))} alt="Weather Icon" /></p> */}
+                                            {console.log("SeventyTwo hours icons", weatherFunctions.iconByHour(seventyTwoHours, weatherFunctions.temperatureForAnyDay(seventyTwoHours)))}
                                         </div>
                                     </div>
                                 )}

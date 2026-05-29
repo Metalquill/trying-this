@@ -39,3 +39,10 @@ const afterFive = 0 // > 5
 
 const capexTotal = beforeNineCap + oneThrity + twoThrity + threeThrity + fourThrity + fiveThrity + sixThrity + sevenThrity + eightThrity + nineThrity + tenThrity + elevenThrity + twelveThrity + thirtheenThrity + fourteenThrity + fifthteenThrity + sixteenThrity + afterFive
 const opexTotal = beforeNine + firstThrity + secThrity + thirdThrity + fourthThrity + fifthThrity + sixthThrity + seventhThrity + eighthThrity + ninthThrity + tenthThrity  + eleventhThrity + twelvethThrity + thirtheenthThrity + fourtennthThrity + fifthteenthThrity + sixttenthThrity
+
+// 30 minute intervals of activity
+// Opex = student management operational code
+// Capex = student management product code
+// Opex is user support, work on prod bugs, regression testing, release activities, tech debt, all meetings on student management topics
+// Capex = new feature work, development, testing, planned improvements, meetings about new features
+//3.25 minutes = 0.06 ,7.5 minutes = 0.125 ,15 mins = 0.25, 30 mins = 0.5, 45 mins = 0.75 (this one isn't needed though)

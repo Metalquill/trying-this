@@ -1,7 +1,4 @@
-import { type } from '@testing-library/user-event/dist/type';
 import MySVGIcons from '../weather/MySVGIcons'
-import { data } from '../weather/urls';
-import { some } from 'underscore';
 
 // initiating dates
 const currentDate = new Date()
@@ -25,6 +22,11 @@ export const weatherIconOutput = (forecast) => {
 export const weatherIcontest = (dataInput) => {
     const stripTime = [dataInput.replace(/\s+\d+:\d+/, '')]
     console.log("strip time: ", stripTime, typeof stripTime)
+    // if (MySVGIcons[stripTime] === 'no_icon') {
+    //     return 
+    // }
+
+    console.log("icon test: ", MySVGIcons[stripTime])
     return MySVGIcons[stripTime]
 }
 
@@ -37,7 +39,7 @@ export const weatherDesciption = (forecast) => {
     }
 } 
 
-export const temperatureToday = (twentyfourHours) => {
+export const temperatureToday = (twentyfourHours, timeZone) => {
     // Checks dates to see if they are the same as the current date
     // Pushes those matching dates into an array and then returns the length
     // of that array to be used to slice the response data
@@ -47,7 +49,7 @@ export const temperatureToday = (twentyfourHours) => {
     const checkTime = twentyfourHours.map((times) => times.time)
     checkTime.forEach((a) => createDatesFromObjects.push(new Date(a)))
     createDatesFromObjects.forEach(date => {
-        if (date.toLocaleDateString() === currentDate.toLocaleDateString()) {
+        if (date.toLocaleDateString("en-US", { timeZone }) === currentDate.toLocaleDateString("en-US", { timeZone })) {
             matchingDates.push(date);
         }
     });
@@ -55,7 +57,7 @@ export const temperatureToday = (twentyfourHours) => {
 
 }
 
-export const temperatureForTomorrow = (fortyEightHours) => {
+export const temperatureForTomorrow = (fortyEightHours, timeZone) => {
     // Checks dates to see if they are the same as the added date
     // Pushes those matching dates into an array and then returns the length
     // of that array to be used to slice the response data
@@ -64,7 +66,7 @@ export const temperatureForTomorrow = (fortyEightHours) => {
     const checkTime = fortyEightHours.map((times) => times.time)
     checkTime.forEach((a) => createDatesFromObjects.push(new Date(a)))
     createDatesFromObjects.forEach(date => {
-        if (date.toLocaleDateString() === tomorrow.toLocaleDateString()) {
+        if (date.toLocaleDateString("en-US", { timeZone }) === tomorrow.toLocaleDateString("en-US", { timeZone })) {
             matchingDates.push(date);
         }
     });
@@ -89,7 +91,7 @@ export const temperatureByDay = (theData, theDate, minimum, fortyEightHours, sev
     }
     
   }
-export const temperatureForAnyDay = (seventyTwoHours) => {
+export const temperatureForAnyDay = (seventyTwoHours, timeZone) => {
     // Checks dates to see if they are the same as the added date
     // Pushes those matching dates into an array and then returns the length
     // of that array to be used to slice the response data
@@ -98,7 +100,7 @@ export const temperatureForAnyDay = (seventyTwoHours) => {
     const checkTime = seventyTwoHours.map((times) => times.time)
     checkTime.forEach((a) => createDatesFromObjects.push(new Date(a)))
     createDatesFromObjects.forEach(date => {
-        if (date.toLocaleDateString() === dayAfterTomorrow.toLocaleDateString()) {
+        if (date.toLocaleDateString("en-US", { timeZone }) === dayAfterTomorrow.toLocaleDateString("en-US", { timeZone })) {
             matchingDates.push(date);
         }
     });
@@ -106,14 +108,15 @@ export const temperatureForAnyDay = (seventyTwoHours) => {
 }
 
 // Icons for later
-export const iconByHour = (theData, theDate) => {
+export const iconByHour = (theData, theDate, timeZone) => {
     const getIcons = theData.slice(0, theDate)
+    console.log("get icons: ", getIcons)
     const iconDays = []
     let myIcons = []
     getIcons.forEach((datum) => {
         const timeValue = new Date(datum.time)
-        
-        iconDays.push(datum.data.next_1_hours.summary.symbol_code + " " + timeValue.getHours() + ":00")
+        const localTime = new Date(timeValue.toLocaleString("en-US", { timeZone }));
+        iconDays.push(datum.data.next_1_hours.summary.symbol_code + " " + localTime.getHours() + ":00")
         // if(iconDays.filter(value => value.includes('7:00'))) {
         //     myIcons = iconDays.filter(value => value.includes('7:00'))
         // }
